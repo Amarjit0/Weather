@@ -6,19 +6,16 @@
 
 /* --------------------background */
 .container-fluid{
-    /* margin: 0%; */
-     background-color:#16a864;
+    background-color: #16a864;
     background-size: cover;
-    /* margin-bottom: 0px; */
-    height:auto;
-/* max-height:200vh; */
+    height: auto;
 }
 
 .row{
     padding-top: 5.5rem;
     padding-bottom: 5rem;
-    
 }
+
 /* -----------------------------header */
 .header {
     background-image: url(./img/header.jpg);
@@ -27,6 +24,7 @@
     color: rgb(12, 11, 6);
     text-align: center;
     padding: 5rem;
+    transition: background-color 0.5s ease;
 }
 
 .header h1 {
@@ -35,6 +33,7 @@
     font-family: 'Indie Flower', cursive;
     color: #e4eff7;
 }
+
 .header p {
     margin-top: 1rem;
     font-weight: 600;
@@ -44,13 +43,11 @@
 
 a:hover, a:visited, a:link, a:active{
     text-decoration: none;
-    color: #d0e5f5;
+    color: #f12004;
 }
+
 .main {
-    /* background-image: linear-gradient(#424242, #757575); */
     background-color: #212121;
-    
-    
 }
 
 /* --------------------------------input section */
@@ -59,7 +56,6 @@ a:hover, a:visited, a:link, a:active{
     text-align: center;
     display: flex;
     justify-content: center;
-
 }
 
 .inputs input[type="text"] {
@@ -73,9 +69,10 @@ a:hover, a:visited, a:link, a:active{
     border-bottom: solid 1px #16a864;
     color: #16a864;
     border-radius: 2px;
-    margin-right:4px ;
-    
+    margin-right: 4px;
+    transition: all 0.5s ease;
 }
+
 .inputs input[type="submit"] {
     height: 3.5rem;
     width: 6.5rem;
@@ -85,6 +82,13 @@ a:hover, a:visited, a:link, a:active{
     font-size: 1.5rem;
     border: none;
     border-radius: 2px;
+    transition: all 0.5s ease;
+}
+
+.inputs input[type="text"]:focus,
+.inputs input[type="submit"]:focus {
+    background-color: #16a864;
+    color: #212121;
 }
 
 /* -------------------------------display */
@@ -92,6 +96,7 @@ a:hover, a:visited, a:link, a:active{
     text-align: center;
     color: #16a864;
 }
+
 .wrapper {
     margin: 0 9rem;
     width: 50%;
@@ -103,10 +108,4 @@ a:hover, a:visited, a:link, a:active{
 
 .wrapper h2{
     padding: 5px 0;
-    text-align: center;
-  }
-  .wrapper p{
-    text-align: center;
-    margin:10px 0;
-    font-size:20px;
-  }
+}

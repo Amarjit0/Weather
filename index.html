@@ -17,18 +17,20 @@
             <section class="main col-md-7 col-sm-10  ">
             <!-- input section -->
             <section class="inputs">
-                <input type="text" placeholder="Enter any city..." id="cityinput">
+                <input type="text" placeholder="Enter any city..." id="cityinput" list="cities">
+                <datalist id="cities"></datalist>
                 <input type="submit" value="Submit" id="add">
-            <button placeholder="submit" id="add"></button>
             </section>
 
             <!-- Display section -->
             <section class="display">
-                <div class="wrapper">
+                <div class="wrapper" id="city-options-wrapper">
+                    <ul id="city-options"></ul>
                     <h2 id="cityoutput"></h2>
                     <p id="description"></p>
                     <p id="temp"></p>
                     <p id="wind"></p>
+                    <p id="datetime"></p>
 
                 </div>
             </section>
