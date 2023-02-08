@@ -5,8 +5,8 @@ const description = document.querySelector('#description');
 const temperature = document.querySelector('#temp');
 const wind = document.querySelector('#wind');
 const dateTime = document.querySelector('#datetime');
-
-
+const weatherContainer = document.querySelector("#weather-container");
+// const countryName = document.querySelector('#country-name');
 
 const API_KEY = "3045dd712ffe6e702e3245525ac7fa38";
 
@@ -20,7 +20,7 @@ const formatDate = (date) =>
 fetch('./cities.json')
 .then((response) => response.json())
 .then((data) => {
-  const cities = data;
+  const cities = data.map(city => city.name);
   const datalist = document.querySelector('#cities');
   for (const city of cities) {
     const option = document.createElement('option');
@@ -28,7 +28,6 @@ fetch('./cities.json')
     datalist.appendChild(option);
   }
 });
-
 
 
 btn.addEventListener('click', () => {
@@ -46,4 +45,23 @@ btn.addEventListener('click', () => {
 });
 
 
+
+navigator.geolocation.getCurrentPosition(position => {
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
+  console.log(lat)
+  console.log(lon)
+  // fetch the weather data from the OpenWeatherMap API
+  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`)
+    .then(response => response.json())
+    .then(data => {
+      weatherContainer.innerHTML = `
+        <h2>Weather in ${data.name}</h2>
+        <p>Temperature: ${kelvinToCelsius(data.main.temp)}°C</p>
+        <p>Humidity: ${data.main.humidity}%</p>
+        <p>Description: ${data.weather[0].description}</p>
+      `;
+    })
+    .catch(error => console.error(error));
+});
 

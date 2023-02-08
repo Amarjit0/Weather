@@ -6,7 +6,8 @@
 
 /* --------------------background */
 .container-fluid{
-    background-color: #16a864;
+    background-color: rgb(153, 102, 153);
+    color: rgb(255, 255, 204);
     background-size: cover;
     height: auto;
 }
@@ -47,7 +48,7 @@ a:hover, a:visited, a:link, a:active{
 }
 
 .main {
-    background-color: #212121;
+    background-color:  rgb(153, 102, 153);
 }
 
 /* --------------------------------input section */
@@ -66,8 +67,8 @@ a:hover, a:visited, a:link, a:active{
     font-size: 1.5rem;
     border: none;
     background-color: transparent;
-    border-bottom: solid 1px #16a864;
-    color: #16a864;
+    border-bottom: solid 1px #0b0c0c;
+    color:black;
     border-radius: 2px;
     margin-right: 4px;
     transition: all 0.5s ease;
@@ -94,13 +95,13 @@ a:hover, a:visited, a:link, a:active{
 /* -------------------------------display */
 .display {
     text-align: center;
-    color: #16a864;
+    color: #0b0c0c;
 }
 
 .wrapper {
     margin: 0 9rem;
     width: 50%;
-    background-color: #212121;
+    background-color:  rgb(153, 102, 153);
     height: 40vh;
     margin: 50px auto;
     border-radius: 2px;
