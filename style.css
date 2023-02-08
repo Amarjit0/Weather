@@ -56,31 +56,33 @@ a:hover, a:visited, a:link, a:active{
     padding: 6rem 0 2rem 0;
     text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
 }
 
 .inputs input[type="text"] {
-    height: 3.5rem;
-    width: 30rem;
+    height: 3rem;
+    width: 80%;
     background: #212121;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border: none;
     background-color: transparent;
     border-bottom: solid 1px #0b0c0c;
     color:black;
     border-radius: 2px;
-    margin-right: 4px;
+    margin-bottom: 1rem;
     transition: all 0.5s ease;
 }
 
 .inputs input[type="submit"] {
-    height: 3.5rem;
-    width: 6.5rem;
+    height: 3rem;
+    width: 40%;
     background: #16a864;
     font-weight: bold;
     color: ghostwhite;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border: none;
     border-radius: 2px;
     transition: all 0.5s ease;
@@ -99,8 +101,8 @@ a:hover, a:visited, a:link, a:active{
 }
 
 .wrapper {
-    margin: 0 9rem;
-    width: 50%;
+    margin: 0 auto;
+    width: 80%;
     background-color:  rgb(153, 102, 153);
     height: 40vh;
     margin: 50px auto;
